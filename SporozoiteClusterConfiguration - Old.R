@@ -49,13 +49,13 @@ RepsAnalysis$results()
 params_tau1 <- expand.grid(method=c(1,2),balanced=c(1,2),tau = seq(0,0.05,0.005),Z = c(1,2))
 
 #send models to run in the cluster
-TauAnalysis1 <- obj$enqueue_bulk(params_tau1,sporozoite_tau1,do_call = TRUE)
-TauAnalysis1$status()
-TauAnalysis1$results()
+#TauAnalysis1 <- obj$enqueue_bulk(params_tau1,sporozoite_tau1,do_call = TRUE)
+#TauAnalysis1$status()
+#TauAnalysis1$results()
 
 #reformat the results and save in csv 
-results_tau <- matrix(unlist(TauAnalysis1$results()),ncol=12,byrow=TRUE)
-write.csv(results_tau,"TauAnalysisResults.csv")
+#results_tau <- matrix(unlist(TauAnalysis1$results()),ncol=12,byrow=TRUE)
+#write.csv(results_tau,"TauAnalysisResults.csv")
 
 
 #set the parameters - 88 combos (when including Z)
